@@ -1,0 +1,61 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/global_background"></include>
+
+    <FrameLayout
+        android:id="@+id/frameBottomMessage"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#0090FF"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/btnBackMSGLIST"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_arrow_back"/>
+
+        <ImageView
+            android:id="@+id/btnNextMSGLIST"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_arrow_forward"/>
+
+        <Spinner
+            android:id="@+id/spinnerSections"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/arr_numbers"></Spinner>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_above="@id/frameBottomMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/app_bar" />
+
+        <ListView
+            android:background="#00000000"
+            android:padding="8dp"
+            android:id="@+id/listMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.project.samplesmsapplication.ui.SettingsActivity">
+    <include layout="@layout/app_bar"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <include
+            android:id="@+id/itemSettingTheme"
+            layout="@layout/item_settings"></include>
+
+        <include
+            android:id="@+id/itemSettingFontSize"
+            layout="@layout/item_settings"></include>
+
+        <include
+            android:id="@+id/itemSettingFontType"
+            layout="@layout/item_settings"></include>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

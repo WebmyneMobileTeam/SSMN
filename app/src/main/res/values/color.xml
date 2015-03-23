@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red">#FFC93437</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="primaryColor">#252525</color>
+    <color name="primaryColorDark">#252525</color>
+    <color name="colorAccent">#ffffff</color>
+    <drawable name="list_normal">#00000000</drawable>
+    <drawable name="list_selected">#d1d1d1</drawable>
+
+    <color name="background_tab_pressed">#1AFFFFFF</color>
+    <color name="background_window">#FFE5E5E5</color>
+    <color name="green">#689F38</color>
+    <color name="greenDark">#3E5F22</color>
+    <color name="banana">#FFCC00</color>
+    <color name="back1">#efefef</color>
+
+    <color name="back">#EAEAEA</color>
+
+    <color name="color_giftcode">#ED7D31</color>
+    <color name="color_sendmoney">#5B9BD5</color>
+    <color name="color_moneytransfer">#67A93B</color>
+    <color name="color_mobiletopup">#2977AC</color>
+
+
+<!--   &lt;!&ndash; <color name="color_giftcode">#ED7D31</color>&ndash;&gt;
+    <color name="color_giftcode">#2977AC</color>
+    <color name="color_sendmoney">#2977AC</color>
+    <color name="color_moneytransfer">#2977AC</color>
+    <color name="color_mobiletopup">#2977AC</color>-->
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+
+    <color name="orange">#fffe580a</color>
+    <color name="violet">#ffb627e9</color>
+    <color name="header_blue">#ff0090ff</color>
+    <color name="header_green">#ff2cdc03</color>
+    <color name="header_violet">#ff9d03d8</color>
+    <color name="header_orange">#fffe6a12</color>
+    <color name="header_blue_hover">#ff4db2ff</color>
+    <color name="header_green_hover">#ff6ce74f</color>
+    <color name="header_violet_hover">#ffbb4fe4</color>
+    <color name="header_orange_hover">#fffe7d31</color>
+    <color name="txt_white">#fffbfbfb</color>
+    <color name="txt_black">#ff000000</color>
+    <color name="txt_grey">#ffcccccc</color>
+    <color name="txt_grey_9">#ff999999</color>
+    <color name="txt_grey_7">#ff777777</color>
+    <color name="txt_grey_a">#ffaaaaaa</color>
+    <color name="txt_grey_c">#ffcccccc</color>
+    <color name="txt_green">#ff00ff00</color>
+    <color name="txt_red">#ffff0000</color>
+    <color name="bg_white">#fff7f7f7</color>
+    <color name="bg_black">#ff000000</color>
+    <color name="bg_grey">#ffaaaaaa</color>
+    <color name="bg_grey_2">#ffdddddd</color>
+    <color name="bg_cement">#ffeeeeee</color>
+    <color name="bg_trans_white">#70ffffff</color>
+    <color name="bg_trans_black">#70000000</color>
+    <color name="bg_header">#ff333333</color>
+    <color name="bg_black2">#ff222222</color>
+    <color name="bg_home">#ff252525</color>
+    <color name="bg_home_footer_grey">#ff4b4b4b</color>
+    <color name="bg_home_trans_black">#25000000</color>
+    <color name="bg_home_trans_white">#25ffffff</color>
+    <color name="bg_home_trans_grey">#7f000000</color>
+    <color name="facebook">#ff3b5998</color>
+    <color name="twitter">#ff00b6f3</color>
+    <color name="googleplus">#ffd44836</color>
+    <color name="message">#ff8fbe30</color>
+    <color name="other">#ff9e9e9e</color>
+
+
+
+</resources>

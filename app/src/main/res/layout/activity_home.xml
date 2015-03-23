@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/primaryColor"
+    tools:context="com.project.samplesmsapplication.ui.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/linearTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.project.samplesmsapplication.ui.wigets.HalfHeightLayout
+                android:id="@+id/btnMessages"
+
+                android:layout_margin="1dp"
+                android:background="@drawable/gradient_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtHomeMessages"
+                    android:layout_alignParentBottom="true"
+                    style="@style/home_btn_big_txt"
+                    android:text="@string/home_btn1" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/txtHomeMessages">
+
+                    <ImageView
+                        android:src="@drawable/ico_messages"
+                        android:layout_above="@+id/btn1"
+                        style="@style/home_btn_big_iv" />
+
+                </FrameLayout>
+
+
+            </com.project.samplesmsapplication.ui.wigets.HalfHeightLayout>
+
+            <com.project.samplesmsapplication.ui.wigets.HalfHeightLayout
+                android:layout_margin="1dp"
+                android:background="@drawable/gradient_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/txtHomeUpload"
+                    android:layout_alignParentBottom="true"
+                    style="@style/home_btn_big_txt"
+                    android:text="@string/home_btn2" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/txtHomeUpload">
+
+                    <ImageView
+                        android:src="@drawable/ico_upload"
+                        android:layout_above="@+id/btn2"
+                        style="@style/home_btn_big_iv" />
+
+                </FrameLayout>
+
+
+            </com.project.samplesmsapplication.ui.wigets.HalfHeightLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.project.samplesmsapplication.ui.wigets.HalfHeightLayout
+                android:id="@+id/btnFavourites"
+                android:layout_margin="1dp"
+                android:background="@drawable/gradient_orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/txtHomeFavourites"
+                    android:layout_alignParentBottom="true"
+                    style="@style/home_btn_big_txt"
+                    android:text="@string/home_btn3" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/txtHomeFavourites">
+
+                    <ImageView
+                        android:src="@drawable/ico_favourites"
+                        android:layout_above="@+id/btn3"
+                        style="@style/home_btn_big_iv" />
+
+                </FrameLayout>
+
+
+            </com.project.samplesmsapplication.ui.wigets.HalfHeightLayout>
+
+            <com.project.samplesmsapplication.ui.wigets.HalfHeightLayout
+                android:id="@+id/btnSettings"
+                android:layout_margin="1dp"
+                android:background="@drawable/gradient_violet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtHomeSettingss"
+                    android:layout_alignParentBottom="true"
+                    style="@style/home_btn_big_txt"
+                    android:text="@string/home_btn4" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/txtHomeSettingss">
+
+                    <ImageView
+                        android:src="@drawable/ico_option"
+                        android:layout_above="@+id/btn4"
+                        style="@style/home_btn_big_iv" />
+                </FrameLayout>
+
+            </com.project.samplesmsapplication.ui.wigets.HalfHeightLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/linearTop"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/home_ll_ic2_margin_lr"
+        android:layout_marginRight="@dimen/home_ll_ic2_margin_lr"
+        android:layout_marginTop="32dp"
+        android:layout_centerInParent="true"
+        style="@style/fill_wrap_content">
+
+       <RelativeLayout
+            android:id="@+id/rl_search"
+            android:paddingLeft="@dimen/home_btn_small_margin_lr"
+            style="@style/home_btn_small">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:src="@drawable/ico_search"
+                style="@style/home_btn_small_iv" />
+
+            <TextView
+                android:textColor="@color/blue"
+                android:id="@+id/tv_search"
+                android:text="@string/home_btn5"
+                android:layout_toRightOf="@id/iv_search"
+                style="@style/home_btn_small_tv" />
+
+
+        </RelativeLayout>
+
+        <ImageView style="@style/home_btn_separator" />
+
+        <RelativeLayout
+            android:id="@+id/rl_language"
+            android:paddingLeft="@dimen/home_btn_small_margin_lr"
+            style="@style/home_btn_small">
+
+            <ImageView
+                android:id="@+id/iv_language"
+                android:src="@drawable/ico_language"
+                style="@style/home_btn_small_iv" />
+
+            <TextView
+                android:textColor="@color/green"
+                android:id="@+id/tv_language"
+                android:text="@string/home_btn6"
+                android:layout_toRightOf="@id/iv_language"
+                style="@style/home_btn_small_tv" />
+
+
+        </RelativeLayout>
+
+<!--        <ImageView style="@style/home_btn_separator" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bugreport"
+            android:paddingLeft="@dimen/home_btn_small_margin_lr"
+            style="@style/home_btn_small">
+
+            <ImageView
+                android:id="@+id/iv_bugreport"
+                android:src="@drawable/ico_bug"
+                style="@style/home_btn_small_iv" />
+
+            <TextView
+                android:textColor="@color/orange"
+                android:id="@+id/tv_bugreport"
+                android:text="@string/home_btn7"
+                android:layout_toRightOf="@id/iv_bugreport"
+                style="@style/home_btn_small_tv" />
+        </RelativeLayout>-->
+
+        <ImageView style="@style/home_btn_separator" />
+
+        <RelativeLayout
+            android:id="@+id/rl_exit"
+            android:paddingLeft="@dimen/home_btn_small_margin_lr"
+            style="@style/home_btn_small">
+
+            <ImageView
+                android:id="@+id/iv_exit"
+                android:src="@drawable/ico_logout"
+                style="@style/home_btn_small_iv" />
+
+            <TextView
+                android:textColor="@color/violet"
+                android:id="@+id/tv_exit"
+                android:text="@string/home_btn8"
+                android:layout_toRightOf="@id/iv_exit"
+                style="@style/home_btn_small_tv" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
