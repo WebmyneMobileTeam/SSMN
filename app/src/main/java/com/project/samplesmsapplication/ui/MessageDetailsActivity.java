@@ -59,6 +59,8 @@ public class MessageDetailsActivity extends ActionBarActivity implements View.On
     private ImageView globalImageview;
     private ImageView imgThumbsUp;
     private ImageView getImgThumbsDown;
+    private  ImageView iconReadUnRead;
+    private  ImageView iconSettings;
 
     private Menu menu;
 
@@ -84,27 +86,24 @@ public class MessageDetailsActivity extends ActionBarActivity implements View.On
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         params.gravity = Gravity.RIGHT;
+        params.leftMargin = 16;
+        params.rightMargin = 16;
 
         LinearLayout linearLayout = new LinearLayout(MessageDetailsActivity.this);
         linearLayout.setGravity(Gravity.RIGHT);
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
+        iconReadUnRead=new ImageView(MessageDetailsActivity.this);
+        iconReadUnRead.setBackgroundResource(R.drawable.ic_action_communication_email);
+        iconReadUnRead.setLayoutParams(layoutParams);
 
-        ImageView icon=new ImageView(MessageDetailsActivity.this);
-        icon.setBackgroundResource(R.drawable.ic_action_communication_email);
-        icon.setLayoutParams(layoutParams);
+        iconSettings=new ImageView(MessageDetailsActivity.this);
+        iconSettings.setBackgroundResource(R.drawable.ic_action_settings);
+        iconSettings.setLayoutParams(layoutParams);
 
-        ImageView icon2=new ImageView(MessageDetailsActivity.this);
-        icon2.setBackgroundResource(R.drawable.ic_action_content_drafts);
-        icon2.setLayoutParams(layoutParams);
-
-        linearLayout.addView(icon, params);
-        linearLayout.addView(icon2,params);
-
+        linearLayout.addView(iconReadUnRead, params);
+        linearLayout.addView(iconSettings,params);
         toolbar.addView(linearLayout,layoutParams);
-
-
-
 
         init();
         Intent intent = getIntent();
