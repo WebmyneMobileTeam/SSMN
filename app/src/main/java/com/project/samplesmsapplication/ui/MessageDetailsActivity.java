@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -75,13 +76,42 @@ public class MessageDetailsActivity extends ActionBarActivity implements View.On
             toolbar.setNavigationIcon(R.drawable.ic_action_icon_home);
         }
 
+       Toolbar.LayoutParams layoutParams = new Toolbar.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                Gravity.CENTER_VERTICAL | Gravity.RIGHT);
+
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.gravity = Gravity.RIGHT;
+
+        LinearLayout linearLayout = new LinearLayout(MessageDetailsActivity.this);
+        linearLayout.setGravity(Gravity.RIGHT);
+        linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+
+
+        ImageView icon=new ImageView(MessageDetailsActivity.this);
+        icon.setBackgroundResource(R.drawable.ic_action_communication_email);
+        icon.setLayoutParams(layoutParams);
+
+        ImageView icon2=new ImageView(MessageDetailsActivity.this);
+        icon2.setBackgroundResource(R.drawable.ic_action_content_drafts);
+        icon2.setLayoutParams(layoutParams);
+
+        linearLayout.addView(icon, params);
+        linearLayout.addView(icon2,params);
+
+        toolbar.addView(linearLayout,layoutParams);
+
+
+
+
         init();
         Intent intent = getIntent();
         current_id = intent.getIntExtra("id", 0);
         current_message = intent.getStringExtra("msg");
         current_position = intent.getIntExtra("position", 0);
         cat_id = intent.getIntExtra("category_id", 0);
-
 
     }
 
@@ -140,12 +170,9 @@ public class MessageDetailsActivity extends ActionBarActivity implements View.On
             msgs.get(viewPager.getCurrentItem()).isFavourite = false;
             imgFavourite.setImageResource(R.drawable.ic_toggle_star_outline);
             Toast.makeText(MessageDetailsActivity.this,"Removed From Favourite",Toast.LENGTH_SHORT).show();
-
         }
 
-
     }
-
 
     private ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {
 
